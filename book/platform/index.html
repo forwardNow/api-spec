@@ -65,6 +65,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="users.html" />
+    
     
     <link rel="prev" href="../spec/errorcode.html" />
     
@@ -312,6 +314,36 @@
             
         </li>
     
+        <li class="chapter " data-level="3.2" data-path="users.html">
+            
+                <a href="users.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    用户模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="roles.html">
+            
+                <a href="roles.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    角色模块
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -357,7 +389,106 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="&#x7D22;&#x5F15;">&#x7D22;&#x5F15;</h1>
+<h2 id="1-&#x7528;&#x6237;&#x6A21;&#x5757;">1. <a href="users.html">&#x7528;&#x6237;&#x6A21;&#x5757;</a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x57FA;&#x7840; API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/get</code></td>
+<td>&#x83B7;&#x53D6;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/users/list</code></td>
+<td>&#x83B7;&#x53D6;&#x591A;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/users/insert</code></td>
+<td>&#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/users/update</code></td>
+<td>&#x66F4;&#x65B0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/users/delete</code></td>
+<td>&#x66F4;&#x65B0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x7279;&#x6B8A; API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/users/roles/list</code></td>
+<td>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x62E5;&#x6709;&#x7684;&#x6240;&#x6709;&#x89D2;&#x8272;</td>
+</tr>
+<tr>
+<td><code>/users/menus/list</code></td>
+<td>&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x62E5;&#x6709;&#x7684;&#x6240;&#x6709;&#x83DC;&#x5355;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-&#x89D2;&#x8272;&#x6A21;&#x5757;">2. <a href="roles.html">&#x89D2;&#x8272;&#x6A21;&#x5757;</a></h2>
+<table>
+<thead>
+<tr>
+<th>&#x57FA;&#x7840; API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/roles/get</code></td>
+<td>&#x83B7;&#x53D6;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/roles/list</code></td>
+<td>&#x83B7;&#x53D6;&#x591A;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/roles/insert</code></td>
+<td>&#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/roles/update</code></td>
+<td>&#x66F4;&#x65B0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+<tr>
+<td><code>/roles/delete</code></td>
+<td>&#x66F4;&#x65B0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x7279;&#x6B8A; API</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/roles/users/list</code></td>
+<td>&#x83B7;&#x53D6;&#x62E5;&#x6709;&#x6307;&#x5B9A;&#x89D2;&#x8272;&#x7684;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td><code>/roles/menus/list</code></td>
+<td>&#x83B7;&#x53D6;&#x5206;&#x914D;&#x7ED9;&#x8BE5;&#x6A58;&#x8272;&#x7684;&#x6240;&#x6709;&#x83DC;&#x5355;</td>
+</tr>
+</tbody>
+</table>
+
                                 
                                 </section>
                             
@@ -384,10 +515,14 @@
 
             
                 
-                <a href="../spec/errorcode.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 错误码">
+                <a href="../spec/errorcode.html" class="navigation navigation-prev " aria-label="Previous page: 错误码">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="users.html" class="navigation navigation-next " aria-label="Next page: 用户模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -396,7 +531,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"索引","level":"3.1","depth":1,"previous":{"title":"错误码","level":"2.7","depth":1,"path":"spec/errorcode.md","ref":"spec/errorcode.md","articles":[]},"dir":"neutral"},"config":{"plugins":["expandable-chapters-interactive","splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-interactive":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"吴钦飞","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"API 规范文档","gitbook":"*","description":"规范"},"file":{"path":"platform/index.md","mtime":"2018-11-01T11:33:25.925Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-01T12:55:56.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"索引","level":"3.1","depth":1,"next":{"title":"用户模块","level":"3.2","depth":1,"path":"platform/users.md","ref":"platform/users.md","articles":[]},"previous":{"title":"错误码","level":"2.7","depth":1,"path":"spec/errorcode.md","ref":"spec/errorcode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-interactive","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-interactive":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"吴钦飞","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"API 规范文档","gitbook":"*","description":"规范"},"file":{"path":"platform/index.md","mtime":"2018-11-01T14:18:25.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-01T14:48:19.709Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -411,10 +546,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

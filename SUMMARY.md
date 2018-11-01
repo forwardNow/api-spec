@@ -21,3 +21,5 @@
 ## 3. 基础支撑平台 API 设计
 
 * [索引](platform/index.md)
+* [用户模块](platform/users.md)
+* [角色模块](platform/roles.md)

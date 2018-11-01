@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>返回结果 · API 规范文档</title>
+        <title>角色模块 · API 规范文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="errorcode.html" />
     
-    
-    <link rel="prev" href="filter.html" />
+    <link rel="prev" href="users.html" />
     
 
     </head>
@@ -187,9 +185,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="protocol.html">
+        <li class="chapter " data-level="2.1" data-path="../spec/protocol.html">
             
-                <a href="protocol.html">
+                <a href="../spec/protocol.html">
             
                     
                         <b>2.1.</b>
@@ -202,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="domain.html">
+        <li class="chapter " data-level="2.2" data-path="../spec/domain.html">
             
-                <a href="domain.html">
+                <a href="../spec/domain.html">
             
                     
                         <b>2.2.</b>
@@ -217,9 +215,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="version.html">
+        <li class="chapter " data-level="2.3" data-path="../spec/version.html">
             
-                <a href="version.html">
+                <a href="../spec/version.html">
             
                     
                         <b>2.3.</b>
@@ -232,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="endpoint.html">
+        <li class="chapter " data-level="2.4" data-path="../spec/endpoint.html">
             
-                <a href="endpoint.html">
+                <a href="../spec/endpoint.html">
             
                     
                         <b>2.4.</b>
@@ -247,9 +245,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="filter.html">
+        <li class="chapter " data-level="2.5" data-path="../spec/filter.html">
             
-                <a href="filter.html">
+                <a href="../spec/filter.html">
             
                     
                         <b>2.5.</b>
@@ -262,9 +260,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.6" data-path="response.html">
+        <li class="chapter " data-level="2.6" data-path="../spec/response.html">
             
-                <a href="response.html">
+                <a href="../spec/response.html">
             
                     
                         <b>2.6.</b>
@@ -277,9 +275,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.7" data-path="errorcode.html">
+        <li class="chapter " data-level="2.7" data-path="../spec/errorcode.html">
             
-                <a href="errorcode.html">
+                <a href="../spec/errorcode.html">
             
                     
                         <b>2.7.</b>
@@ -299,9 +297,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../platform/">
+        <li class="chapter " data-level="3.1" data-path="./">
             
-                <a href="../platform/">
+                <a href="./">
             
                     
                         <b>3.1.</b>
@@ -314,9 +312,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../platform/users.html">
+        <li class="chapter " data-level="3.2" data-path="users.html">
             
-                <a href="../platform/users.html">
+                <a href="users.html">
             
                     
                         <b>3.2.</b>
@@ -329,9 +327,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../platform/roles.html">
+        <li class="chapter active" data-level="3.3" data-path="roles.html">
             
-                <a href="../platform/roles.html">
+                <a href="roles.html">
             
                     
                         <b>3.3.</b>
@@ -374,7 +372,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >返回结果</a>
+        <a href=".." >角色模块</a>
     </h1>
 </div>
 
@@ -389,72 +387,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x8FD4;&#x56DE;&#x7ED3;&#x679C;">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</h1>
-<h2 id="1-&#x6A21;&#x5F0F;">1. &#x6A21;&#x5F0F;</h2>
-<pre><code class="lang-text">HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  &quot;errorCode&quot;: &lt;Number&gt;,
-  &quot;reason&quot;: &lt;String&gt;,
-  &quot;result&quot;: &lt;Object|null&gt;
-}
-</code></pre>
-<h2 id="2-&#x8BF4;&#x660E;">2. &#x8BF4;&#x660E;</h2>
-<table>
-<thead>
-<tr>
-<th>&#x5C5E;&#x6027;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>errorCode</code></td>
-<td><code>Number</code></td>
-<td>&#x9519;&#x8BEF;&#x7801;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="errorcode.html">&#x8BE6;&#x60C5;</a></td>
-</tr>
-<tr>
-<td><code>reason</code></td>
-<td><code>String</code></td>
-<td>&#x9519;&#x8BEF;&#x539F;&#x56E0;</td>
-</tr>
-<tr>
-<td><code>result</code></td>
-<td><code>Object</code> <code>null</code></td>
-<td>&#x7ED3;&#x679C;&#x6570;&#x636E;</td>
-</tr>
-</tbody>
-</table>
-<h2 id="3-&#x7ED3;&#x679C;&#x6570;&#x636E;">3. &#x7ED3;&#x679C;&#x6570;&#x636E;</h2>
-<p>&#x7ED3;&#x679C;&#x6570;&#x636E;&#x5206;&#x4E24;&#x79CD;&#x60C5;&#x51B5;</p>
-<ul>
-<li>&#x4E00;&#x6761;&#x8BB0;&#x5F55;</li>
-<li>&#x591A;&#x6761;&#x8BB0;&#x5F55;</li>
-</ul>
-<h3 id="31-&#x4E00;&#x6761;&#x8BB0;&#x5F55;">3.1. &#x4E00;&#x6761;&#x8BB0;&#x5F55;</h3>
-<p>&#x76F4;&#x63A5;&#x7528;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x8868;&#x793A;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x5982;&#x4E0B;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;errorCode&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;reason&quot;</span>: <span class="hljs-string">&quot;OK&quot;</span>,
-  <span class="hljs-string">&quot;result&quot;</span>: { <span class="hljs-string">&quot;UserId&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;UserTrueName&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span> }
-}
-</code></pre>
-<h3 id="32-&#x591A;&#x6761;&#x8BB0;&#x5F55;">3.2. &#x591A;&#x6761;&#x8BB0;&#x5F55;</h3>
-<p>&#x591A;&#x6761;&#x8BB0;&#x5F55;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x5206;&#x9875;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x5982;&#x4E0B;</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;errorCode&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;reason&quot;</span>: <span class="hljs-string">&quot;OK&quot;</span>,
-  <span class="hljs-string">&quot;result&quot;</span>: {
-    <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-string">&quot;items&quot;</span>: [
-      { <span class="hljs-string">&quot;UserId&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;UserTrueName&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span> },
-      { <span class="hljs-string">&quot;UserId&quot;</span>: <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;UserTrueName&quot;</span>: <span class="hljs-string">&quot;&#x674E;&#x56DB;&quot;</span> }
-    ]
-  }
-}
-</code></pre>
+                                <h1 id="&#x89D2;&#x8272;&#x6A21;&#x5757;">&#x89D2;&#x8272;&#x6A21;&#x5757;</h1>
 
                                 
                                 </section>
@@ -482,14 +415,10 @@ Content-Type: application/json
 
             
                 
-                <a href="filter.html" class="navigation navigation-prev " aria-label="Previous page: 过滤信息">
+                <a href="users.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 用户模块">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="errorcode.html" class="navigation navigation-next " aria-label="Next page: 错误码">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -498,7 +427,7 @@ Content-Type: application/json
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"返回结果","level":"2.6","depth":1,"next":{"title":"错误码","level":"2.7","depth":1,"path":"spec/errorcode.md","ref":"spec/errorcode.md","articles":[]},"previous":{"title":"过滤信息","level":"2.5","depth":1,"path":"spec/filter.md","ref":"spec/filter.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-interactive","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-interactive":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"吴钦飞","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"API 规范文档","gitbook":"*","description":"规范"},"file":{"path":"spec/response.md","mtime":"2018-11-01T12:14:31.756Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-01T14:48:19.709Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"角色模块","level":"3.3","depth":1,"previous":{"title":"用户模块","level":"3.2","depth":1,"path":"platform/users.md","ref":"platform/users.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-interactive","splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-interactive":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"吴钦飞","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"API 规范文档","gitbook":"*","description":"规范"},"file":{"path":"platform/roles.md","mtime":"2018-11-01T14:16:26.475Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-01T14:48:19.709Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
