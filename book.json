@@ -1,4 +1,7 @@
 {
+  "title": "API 规范文档",
+  "description": "规范",
+  "author": "吴钦飞",
   "plugins": [
     "expandable-chapters-interactive",
     "splitter"
