@@ -16,7 +16,7 @@
 * [请求路径](spec/endpoint.md)
 * [过滤信息](spec/filter.md)
 * [返回结果](spec/response.md)
-* [错误码](spec/protocol.md)
+* [错误码](spec/errorcode.md)
 
 ## 3. 基础支撑平台 API 设计
 

@@ -1,4 +1,4 @@
-# 设计原则
+# 设计原则（约定）
 
 * 数据编码为 UTF-8。
 * 数据交换格式为：JSON。即 `Content-Type: application/json`

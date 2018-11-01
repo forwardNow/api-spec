@@ -1,12 +1,12 @@
 {
   "plugins": [
-    "expandable-chapters-small",
+    "expandable-chapters-interactive",
     "splitter"
   ],
   "pluginsConfig": {
     "theme-default": {
       "showLevel": true
     },
-    "expandable-chapters-small":{}
+    "expandable-chapters": {}
   }
 }

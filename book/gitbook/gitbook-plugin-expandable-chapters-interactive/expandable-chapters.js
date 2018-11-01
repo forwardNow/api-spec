@@ -5,6 +5,7 @@ require(['gitbook', 'jQuery'], function(gitbook, $) {
       TRIGGER_TEMPLATE = '<i class="exc-trigger fa"></i>',
       LS_NAMESPACE = 'expChapters';
   var init = function () {
+    
     // adding the trigger element to each ARTICLES parent and binding the event
     $(ARTICLES)
       .parent(CHAPTER)
@@ -17,6 +18,18 @@ require(['gitbook', 'jQuery'], function(gitbook, $) {
             toggle($(e.target).closest(CHAPTER));
           })
       );
+
+    // for unlink
+    $(ARTICLES)
+      .parent(CHAPTER)
+      .children('span')
+      .append($(TRIGGER_TEMPLATE))
+      .on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggle($(e.target).closest(CHAPTER));
+      })
+
     expand(lsItem());
     //expand current selected chapter with it's parents
     var activeChapter = $(CHAPTER + '.active');
