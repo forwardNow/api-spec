@@ -24,7 +24,7 @@ CLI version: 2.3.2
 GitBook version: 3.2.3
 ```
 
-第 3 步：下载本仓库
+第 3 步：下载 [api-spec](https://github.com/forwardNow/api-spec)
 
 ```shell
 # 克隆 api-spec
