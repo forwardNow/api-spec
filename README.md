@@ -53,3 +53,9 @@ $ gitbook serve ./api-spec ./api-spec/book
 # 切换到项目根目录的上级目录
 $ gitbook build ./api-spec ./api-spec/book
 ```
+
+## 3. 参考
+
+* [聚合数据](https://www.juhe.cn/)
+* [天眼查 Open API](https://open.tianyancha.com/open/362)
+* [科大讯飞 REST API 的用户指南](https://doc.xfyun.cn/rest_api/)
