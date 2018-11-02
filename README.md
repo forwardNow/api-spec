@@ -27,8 +27,12 @@ GitBook version: 3.2.3
 第 3 步：下载本仓库
 
 ```shell
-# 克隆
+# 克隆 api-spec
 $ git clone https://github.com/forwardNow/api-spec.git
+
+# 补充：同步 api-spec 项目的最新代码
+$ cd api-spec/
+$ git pull
 ```
 
 第 4 步：使用
@@ -43,9 +47,9 @@ $ cd ..
 $ gitbook serve ./api-spec ./api-spec/book
 ```
 
-构建：
+第 5步：编译。（此步可省略）
 
 ```shell
 # 切换到项目根目录的上级目录
-$ gitbook serve ./api-spec ./api-spec/book
+$ gitbook build ./api-spec ./api-spec/book
 ```
