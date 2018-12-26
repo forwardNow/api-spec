@@ -1,0 +1,428 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据交换格式 · API 规范文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="吴钦飞">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="code.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">1. 快速开始</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    文档使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2. API 规范</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="data-fmt.html">
+            
+                <a href="data-fmt.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    数据交换格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="code.html">
+            
+                <a href="code.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    状态码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3. 系统管理 API 设计</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../system/user.html">
+            
+                <a href="../system/user.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据交换格式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;">&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;</h1>
+<h2 id="1-&#x4ECB;&#x7ECD;">1. &#x4ECB;&#x7ECD;</h2>
+<p>&#x7EA6;&#x5B9A;&#x524D;&#x540E;&#x7AEF;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x9488;&#x5BF9; HTTP &#x8FDB;&#x884C;&#x7EA6;&#x5B9A;&#xFF0C;&#x6D89;&#x53CA;&#x4EE5;&#x4E0B;&#x65B9;&#x9762;&#xFF1A;</p>
+<ul>
+<li>&#x72B6;&#x6001;&#x7801;</li>
+<li>&#x65B9;&#x6CD5;</li>
+<li>&#x6D88;&#x606F;&#x4F53;&#x6570;&#x636E;&#x683C;&#x5F0F;<ul>
+<li>MIME &#x7C7B;&#x578B;</li>
+<li>&#x666E;&#x901A;&#x6570;&#x636E;</li>
+<li>&#x5206;&#x9875;&#x6570;&#x636E;</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-&#x72B6;&#x6001;&#x7801;">2. &#x72B6;&#x6001;&#x7801;</h2>
+<p>HTTP &#x54CD;&#x5E94;&#x7684;&#x72B6;&#x6001;&#x7801;&#x7EDF;&#x4E00;&#x4E3A; 200&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x627E;&#x4E0D;&#x5230;&#x8D44;&#x6E90;&#xFF08;&#x201C;404&#x201D;&#xFF09;&#x8FD8;&#x662F;&#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;&#xFF08;&#x201C;500&#x201D;&#xFF09;&#xFF0C;&#x90FD;&#x5F3A;&#x5236;&#x4E3A; 200&#x3002;</p>
+<p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#x7684;&#x72B6;&#x6001;&#x7531;&#x6D88;&#x606F;&#x4F53;&#x5185;&#x7684;&#x72B6;&#x6001;&#x5B57;&#x6BB5;&#xFF08;<code>&quot;code&quot;</code>&#xFF09;&#x51B3;&#x5B9A;&#xFF0C;&#x67E5;&#x770B; &#x201C;&#x72B6;&#x6001;&#x7801;&#x201D; &#x7AE0;&#x8282;&#x3002;</p>
+<p>&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x65B9;&#x4FBF;&#x5BA2;&#x6237;&#x7AEF;&#x7EDF;&#x4E00;&#x5904;&#x7406;</li>
+</ul>
+<h2 id="3-&#x65B9;&#x6CD5;">3. &#x65B9;&#x6CD5;</h2>
+<p>HTTP &#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;&#x7EDF;&#x4E00;&#x4E3A; <code>&quot;POST&quot;</code>&#x3002;</p>
+<p>&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x907F;&#x514D;&#x7F16;&#x7801;&#x95EE;&#x9898;</li>
+</ul>
+<h2 id="4-&#x6D88;&#x606F;&#x4F53;&#x6570;&#x636E;&#x683C;&#x5F0F;">4. &#x6D88;&#x606F;&#x4F53;&#x6570;&#x636E;&#x683C;&#x5F0F;</h2>
+<p>&#x8BF7;&#x6C42;&#xFF1A;</p>
+<pre><code class="lang-text">{
+  &quot;prop1&quot;: &quot;value1&quot;,
+  &quot;prop2&quot;: &quot;value2&quot;,
+  &quot;prop3&quot;: &quot;value3&quot;
+}
+</code></pre>
+<p>&#x54CD;&#x5E94;&#xFF1A;</p>
+<pre><code class="lang-text">{
+  &quot;code&quot;: &lt;Number&gt;,           // &#x4E1A;&#x52A1;&#x72B6;&#x6001;&#x7801;&#xFF08;&#x5FC5;&#x987B;&#xFF09;
+  &quot;message&quot;: [String],        // &#x72B6;&#x6001;&#x7801;&#x63CF;&#x8FF0;&#xFF08;&#x53EF;&#x9009;&#xFF09;
+  &quot;result&quot;: [Object | Array]  // &#x6570;&#x636E;/&#x7ED3;&#x679C;&#xFF08;&#x53EF;&#x9009;&#xFF09;
+}
+</code></pre>
+<h3 id="41-mime-&#x7C7B;&#x578B;">4.1. MIME &#x7C7B;&#x578B;</h3>
+<p>&#x7EDF;&#x4E00;&#x4F7F;&#x7528; <code>application/json</code> MIME &#x7C7B;&#x578B;&#xFF0C;&#x5373;&#x6D88;&#x606F;&#x5934;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-text">Content-Type: application/json;charset=UTF-8
+</code></pre>
+<h3 id="42-&#x666E;&#x901A;&#x6570;&#x636E;&#xFF08;&#x5355;&#x6761;&#x6570;&#x636E;&#xFF09;">4.2. &#x666E;&#x901A;&#x6570;&#x636E;&#xFF08;&#x5355;&#x6761;&#x6570;&#x636E;&#xFF09;</h3>
+<p>&#x8BF7;&#x6C42;&#xFF1A;</p>
+<blockquote>
+<p>&#x8BF7;&#x6C42;&#x4F53;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; bean &#x5BF9;&#x8C61;&#x63A5;&#x6536;</p>
+</blockquote>
+<pre><code class="lang-text">POST /api/v1/users/get HTTP/1.1
+Host: example.com
+Accept: application/json
+Content-Type: application/json
+
+{
+  &quot;UserId&quot;: &apos;123&apos;
+}
+</code></pre>
+<p>&#x54CD;&#x5E94;&#xFF1A;</p>
+<pre><code class="lang-text">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;code&quot;: 0,
+  &quot;message&quot;: &quot;OK&quot;,
+  &quot;result&quot;: {
+    &quot;UserId&quot;: &apos;123&apos;,
+    &quot;UserTrueName&quot;: &quot;&#x5F20;&#x4E09;&quot;,
+    &quot;Sex&quot;: &quot;0&quot;
+  }
+}
+</code></pre>
+<h3 id="43-&#x5206;&#x9875;&#x6570;&#x636E;&#xFF08;&#x591A;&#x6761;&#x6570;&#x636E;&#xFF09;">4.3. &#x5206;&#x9875;&#x6570;&#x636E;&#xFF08;&#x591A;&#x6761;&#x6570;&#x636E;&#xFF09;</h3>
+<p>&#x8BF7;&#x6C42;&#xFF1A;</p>
+<blockquote>
+<p>&#x8BF7;&#x6C42;&#x4F53; <code>condition</code> &#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; bean &#x5BF9;&#x8C61;&#x63A5;&#x6536;&#xFF0C;<code>pager</code> &#x5B57;&#x6BB5;&#x7528;&#x5206;&#x9875;&#x5BF9;&#x8C61;&#x63A5;&#x6536;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-text">POST /api/v1/users/list HTTP/1.1
+Host: example.com
+Accept: application/json
+Content-Type: application/json
+
+{
+  &quot;condition&quot;: {
+    &quot;sex&quot;: &quot;0&quot;
+  },
+  &quot;pager&quot;: {
+    &quot;currentPage&quot;: 1, // &#x5F53;&#x524D;&#x9875;
+    &quot;pageSize&quot;: 20,   // &#x6BCF;&#x9875;&#x7684;&#x8BB0;&#x5F55;&#x6570;
+  }
+}
+</code></pre>
+<p>&#x54CD;&#x5E94;&#xFF1A;</p>
+<blockquote>
+<p><code>result</code> &#x4E2D;&#x9700;&#x8981;&#x8FD4;&#x56DE; <code>pager</code> &#x7528;&#x4E8E;&#x524D;&#x7AEF;&#x5206;&#x9875;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-text">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;code&quot;: 0,
+  &quot;message&quot;: &quot;OK&quot;,
+  &quot;result&quot;: {
+    &quot;pager&quot;: {
+      &quot;total&quot;: 2,
+      &quot;currentPage&quot;: 1, // &#x5F53;&#x524D;&#x9875;
+      &quot;pageSize&quot;: 20,   // &#x6BCF;&#x9875;&#x7684;&#x8BB0;&#x5F55;&#x6570;
+    },
+    &quot;items&quot;: [
+      { &quot;UserId&quot;: &quot;1&quot;, &quot;UserTrueName&quot;: &quot;&#x5F20;&#x4E09;&quot; },
+      { &quot;UserId&quot;: &quot;2&quot;, &quot;UserTrueName&quot;: &quot;&#x674E;&#x56DB;&quot; }
+    ]
+  }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 文档使用说明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="code.html" class="navigation navigation-next " aria-label="Next page: 状态码">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据交换格式","level":"2.1","depth":1,"next":{"title":"状态码","level":"2.2","depth":1,"path":"spec/code.md","ref":"spec/code.md","articles":[]},"previous":{"title":"文档使用说明","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-interactive","splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-interactive":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{}},"theme":"default","author":"吴钦飞","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"API 规范文档","gitbook":"*","description":"规范"},"file":{"path":"spec/data-fmt.md","mtime":"2018-12-26T14:41:05.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T13:53:20.036Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

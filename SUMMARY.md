@@ -4,26 +4,11 @@
 
 * [文档使用说明](README.md)
 
-## 2. 概述
+## 2. API 规范
 
-* [编写目的](summary/goal.md)
-* [预期读者](summary/expected-readers.md)
-* 关于接口
-  * [基本分类](summary/api-category.md)
-  * [设计原则](summary/convention.md)
+* [数据交换格式](spec/data-fmt.md)
+* [状态码](spec/code.md)
 
-## 3. API 规范
+## 3. 系统管理 API 设计
 
-* [协议](spec/protocol.md)
-* [域名](spec/domain.md)
-* [版本](spec/version.md)
-* [请求路径](spec/endpoint.md)
-* [过滤信息](spec/filter.md)
-* [返回结果](spec/response.md)
-* [错误码](spec/errorcode.md)
-
-## 4. 基础支撑平台 API 设计
-
-* [索引](platform/index.md)
-* [用户模块](platform/users.md)
-* [角色模块](platform/roles.md)
+* [用户](system/user.md)
