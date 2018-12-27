@@ -4,7 +4,7 @@
 
 用户模块相关 API 。
 
-## 2. `/api/getUserById`
+## 2. `/UserController/queryUserInfo`
 
 >根据用户 ID 获取用户数据。
 

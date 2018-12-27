@@ -9,6 +9,7 @@
 * [数据交换格式](spec/data-fmt.md)
 * [状态码](spec/code.md)
 
-## 3. 系统管理 API 设计
+## 3. 系统管理 API 说明
 
+* [会话](system/session.md)
 * [用户](system/user.md)
