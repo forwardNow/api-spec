@@ -11,5 +11,5 @@
 
 ## 3. 系统管理 API 说明
 
-* [会话](system/session.md)
+* [会话（anno）](system/session.md)
 * [用户](system/user.md)
