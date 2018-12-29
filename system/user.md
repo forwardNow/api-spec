@@ -53,3 +53,112 @@
 | - | - | - |
 | 1 | `"fail"` | null |
 | 500 | `"未知错误"` | null |
+
+## 2. 删除用户
+
+请求：
+
+```javascript
+// POST /systemManage/UserController/deleteUser
+// Content-Type: application/json
+
+{
+  userId: String // 【必填】用户的ID
+}
+```
+
+响应：
+
+```javascript
+// HTTP/1.1 200 OK
+// Content-Type: application/json
+
+{
+  "code": 0,
+  "message": "OK",
+  "result": null
+}
+```
+
+异常：
+
+| code | message | result |
+| - | - | - |
+| 1 | `"fail"` | null |
+| 500 | `"未知错误"` | null |
+
+## 3. 用户详情
+
+请求：
+
+```javascript
+// POST /systemManage/UserController/userDetails
+// Content-Type: application/json
+
+{
+  userId: String // 【必填】用户的ID
+}
+```
+
+响应：
+
+```javascript
+// HTTP/1.1 200 OK
+// Content-Type: application/json
+
+{
+  "code": 0,
+  "message": "OK",
+  "result": {
+    // com.xwh.it.systemManage.vo.UserVO
+  }
+}
+```
+
+异常：
+
+| code | message | result |
+| - | - | - |
+| 1 | `"fail"` | null |
+| 500 | `"未知错误"` | null |
+
+## 4. 添加用户
+
+请求：
+
+```javascript
+// POST /systemManage/UserController/addUser
+// Content-Type: application/json
+
+{
+  userName: '',
+  userRealName: '',
+  userRole: '',
+  userDepartment: '',
+  userPhone: '',
+  userCart: '',
+  manufacturer: '',
+  userEmail: '',
+  applicationSystem: '',
+}
+```
+
+响应：
+
+```javascript
+// HTTP/1.1 200 OK
+// Content-Type: application/json
+
+{
+  "code": 0,
+  "message": "OK",
+  "result": null
+}
+```
+
+异常：
+
+| code | message | result |
+| - | - | - |
+| 1 | `"fail"` | null |
+| 500 | `"未知错误"` | null |
