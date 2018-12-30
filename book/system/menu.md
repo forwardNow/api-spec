@@ -48,7 +48,7 @@
 }
 ```
 
-异常：
+失败：
 
 | code | message | result |
 | - | - | - |
