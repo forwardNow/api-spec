@@ -1,8 +1,6 @@
 # 角色管理
 
-## 1. 模型（PO/VO/bean）
-
-### 1.1. UserRoleVO
+>UserRoleVO
 
 ```javascript
 {
@@ -96,6 +94,40 @@
   "code": 0,
   "message": "OK",
   "result": null
+}
+```
+
+失败：
+
+| code | message | result |
+| - | - | - |
+| 1 | `"fail"` | null |
+
+## 4. 角色详情
+
+请求：
+
+```javascript
+// POST /systemManage/UserRoleController/roleDetails
+// Content-Type: application/json
+
+{
+  roleId: Integer // 【必填】角色 ID
+}
+```
+
+响应：
+
+```javascript
+// HTTP/1.1 200 OK
+// Content-Type: application/json
+
+{
+  "code": 0,
+  "message": "OK",
+  "result": {
+    // UserRoleVO
+  }
 }
 ```
 

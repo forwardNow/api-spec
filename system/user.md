@@ -63,7 +63,7 @@
 // Content-Type: application/json
 
 {
-  userId: String // 【必填】用户的ID
+  userId: Integer // 【必填】用户的ID
 }
 ```
 
@@ -95,7 +95,7 @@
 // Content-Type: application/json
 
 {
-  userId: String // 【必填】用户的ID
+  userId: Integer // 【必填】用户的ID
 }
 ```
 
@@ -169,7 +169,7 @@
 // Content-Type: application/json
 
 {
-  userId: String // 【必填】用户的ID
+  userId: Integer // 【必填】用户的ID
 }
 ```
 
@@ -184,6 +184,32 @@
   "message": "OK",
   "result": null
 }
+```
+
+失败：
+
+| code | message | result |
+| - | - | - |
+| 1 | `"fail"` | null |
+
+## 6. 导出用户
+
+请求：
+
+```javascript
+// POST /systemManage/UserController/userExport
+// Content-Type: application/json
+
+[ 1, 2, 8 ] // 【必填】用户的 ID 列表
+```
+
+响应：
+
+```javascript
+// HTTP/1.1 200 OK
+// Content-Type: application/vnd.ms-excel
+
+// 流数据，下载
 ```
 
 失败：
